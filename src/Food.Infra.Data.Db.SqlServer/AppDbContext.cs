@@ -12,5 +12,18 @@ namespace Food.Infra.Data.Db.SqlServer
 
 
         public DbSet<Restaurant> Restaurants { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+	        base.OnModelCreating(modelBuilder);
+	        modelBuilder.Entity<Restaurant>().HasData(
+		        new Restaurant
+		        {
+			        Name = "A",
+			        Description = "B",
+			        Id = 1
+		        }
+	        );
+        }
     }
 }

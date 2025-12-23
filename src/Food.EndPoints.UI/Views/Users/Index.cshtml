@@ -1,0 +1,12 @@
+﻿
+
+@model List<Food.Infra.Data.Db.SqlServer.IdentityEntities.AppUser>
+
+<h1>مدیریت کاربران</h1>
+
+<ul>
+@foreach(var user in Model)
+{
+	<li>@user.Email "-" @user.PhoneNumber</li>
+}
+</ul>

@@ -1,6 +1,7 @@
 using Food.EndPoints.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Food.Framework.Web;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Food.EndPoints.UI.Controllers
@@ -17,10 +18,20 @@ namespace Food.EndPoints.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
+	        return View();
+		}
 
-        public IActionResult Privacy()
+		public IActionResult Profile()
+		{
+			if (User.Identity.IsAuthenticated == false)
+				return Unauthorized();
+
+			var userId = User.GetCurrentUserId();
+            // Load Current User Profile()
+			return View();
+		}
+
+		public IActionResult Privacy()
         {
             return View();
         }

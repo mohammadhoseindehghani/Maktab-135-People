@@ -10,6 +10,5 @@ namespace Food.Infra.Data.Db.SqlServer.IdentityEntities
     public class AppUser:IdentityUser<int>
     {
         public string? NationalCode{ get; set; }
-        public int? CityId{ get; set; }
     }
 }

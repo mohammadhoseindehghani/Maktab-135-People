@@ -14,7 +14,7 @@ public class UsersDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);
-        builder.HasDefaultSchema("Users");
+	    base.OnModelCreating(builder);
+	    builder.HasDefaultSchema("Users");
     }
 }
