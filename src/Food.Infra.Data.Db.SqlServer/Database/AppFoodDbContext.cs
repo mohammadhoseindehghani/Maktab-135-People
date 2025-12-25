@@ -1,11 +1,11 @@
 ﻿using Food.Core.Domain.Model.Emtities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Food.Infra.Data.Db.SqlServer
+namespace Food.Infra.Data.Db.SqlServer.Database
 {
-    public class AppDbContext : DbContext
+    public class AppFoodDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options)
+        public AppFoodDbContext(DbContextOptions<AppFoodDbContext> options)
             : base(options)
         {
         }

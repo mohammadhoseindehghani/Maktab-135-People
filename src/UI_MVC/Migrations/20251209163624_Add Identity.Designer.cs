@@ -11,7 +11,7 @@ using UI_MVC.Models.Database;
 
 namespace UI_MVC.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(AppPeopleDbContext))]
     [Migration("20251209163624_Add Identity")]
     partial class AddIdentity
     {

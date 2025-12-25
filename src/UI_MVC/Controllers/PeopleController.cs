@@ -12,12 +12,12 @@ namespace UI_MVC.Controllers
     [Authorize]
     public class PeopleController : Controller
     {
-        private readonly AppDbContext dbContext;
+        private readonly AppPeopleDbContext dbContext;
         private readonly IPeopleRepository _peopleRepository;
         private readonly ILogger<PeopleController> _logger;
 
         public PeopleController(
-            AppDbContext context,
+            AppPeopleDbContext context,
             IPeopleRepository peopleRepository,
             ILogger<PeopleController> logger)
         {

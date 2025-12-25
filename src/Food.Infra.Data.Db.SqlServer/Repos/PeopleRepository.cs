@@ -1,13 +1,14 @@
-﻿using UI_MVC.Models.Database;
+﻿using Food.Infra.Data.Db.SqlServer.Database;
+using UI_MVC.Models.Database;
 using UI_MVC.Models.Entities;
 
 namespace UI_MVC.Services;
 
 public class PeopleRepository : IPeopleRepository
 {
-    private readonly AppDbContext _appDbContext;
+    private readonly AppPeopleDbContext _appDbContext;
 
-    public PeopleRepository(AppDbContext appDbContext)
+    public PeopleRepository(AppPeopleDbContext appDbContext)
     {
         _appDbContext = appDbContext;
     }

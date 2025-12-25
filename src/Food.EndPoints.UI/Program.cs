@@ -1,4 +1,4 @@
-using Food.Infra.Data.Db.SqlServer;
+using Food.Infra.Data.Db.SqlServer.Database;
 using Food.Infra.Data.Db.SqlServer.IdentityEntities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddDbContext<AppDbContext>(optionsBuilder => 
+builder.Services.AddDbContext<AppFoodDbContext>(optionsBuilder => 
     optionsBuilder.UseSqlServer(
         "Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Maktab_Food_Db; Integrated Security=True;"));
 

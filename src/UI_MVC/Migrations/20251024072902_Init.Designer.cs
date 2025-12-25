@@ -10,7 +10,7 @@ using UI_MVC.Models.Database;
 
 namespace UI_MVC.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(AppPeopleDbContext))]
     [Migration("20251024072902_Init")]
     partial class Init
     {

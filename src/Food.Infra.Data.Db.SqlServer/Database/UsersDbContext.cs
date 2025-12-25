@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Food.Infra.Data.Db.SqlServer;
+namespace Food.Infra.Data.Db.SqlServer.Database;
 
 public class UsersDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
 {

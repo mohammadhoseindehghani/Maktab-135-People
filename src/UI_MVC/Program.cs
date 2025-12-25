@@ -39,10 +39,10 @@ else
     builder.Services.AddScoped<Calculator2, Calculator2>();
 }
 
-builder.Services.AddDbContext<AppDbContext>(optionsBuilder =>
+builder.Services.AddDbContext<AppPeopleDbContext>(optionsBuilder =>
     optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=Maktab_PeopleDb; Integrated Security=True;"));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppPeopleDbContext>();
 
 
 

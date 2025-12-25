@@ -10,7 +10,7 @@ using UI_MVC.Models.Database;
 
 namespace UI_MVC.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(AppPeopleDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

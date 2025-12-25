@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Maktab.Web\Food.Framework.Web.csproj" />
+  </ItemGroup>
+
 </Project>

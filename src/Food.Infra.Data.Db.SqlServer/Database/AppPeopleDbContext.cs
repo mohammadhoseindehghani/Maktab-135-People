@@ -4,9 +4,9 @@ using UI_MVC.Models.Entities;
 
 namespace UI_MVC.Models.Database
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppPeopleDbContext : IdentityDbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppPeopleDbContext(DbContextOptions<AppPeopleDbContext> options) : base(options)
         {
         }
         
