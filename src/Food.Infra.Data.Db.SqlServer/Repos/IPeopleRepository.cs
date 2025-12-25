@@ -6,5 +6,6 @@ namespace UI_MVC.Services
     {
         List<Person> GetAll();
         Person FindById(int id);
+        int Add(Person model);
     }
 }

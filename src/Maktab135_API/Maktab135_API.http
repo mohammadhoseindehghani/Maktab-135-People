@@ -1,6 +1,38 @@
-@Maktab135_API_HostAddress = http://localhost:5271
+@Maktab135_API_HostAddress = https://localhost:7012
 
 GET {{Maktab135_API_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{Maktab135_API_HostAddress}}/api/people
+
+###
+
+POST {{Maktab135_API_HostAddress}}/api/people
+Content-Type: application/json
+apiKey: d97afbef-92b9-4b6c-bba2-7fc6fa98c7d3
+
+{
+  "firstName": "aaaMohammad",
+  "lastName": "Rasouli",
+  "phoneNumber": "09351234567",
+  "cityName": "Yazd",
+  "age": 100
+}
+
+###
+
+POST {{Maktab135_API_HostAddress}}/api/people/UploadImage
+Content-Type: application/json
+
+{
+  //IFormFile
+}
+
+###
+
+@id=7
+GET {{Maktab135_API_HostAddress}}/api/people/{{id}}/details
 
 ###

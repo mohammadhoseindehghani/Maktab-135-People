@@ -42,8 +42,11 @@ namespace UI_MVC.Controllers
             _logger.LogError("Error 1");
             _logger.LogCritical("Error 1");
 
-            var output = View(people);
-            return output;
+
+            return Ok(people);
+
+            //var output = View(people);
+            //return output;
 
             
         }

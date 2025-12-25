@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using UI_MVC._Framework;
 
 namespace UI_MVC.Models.Entities
@@ -30,6 +31,7 @@ namespace UI_MVC.Models.Entities
         [Range(18,200)]
         [Display(Name = "سن")]
         public int Age { get; set; }
+
         
         
 

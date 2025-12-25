@@ -22,4 +22,11 @@ public class PeopleRepository : IPeopleRepository
     {
         return _appDbContext.People.Find(id);
     }
+
+    public int Add(Person model)
+    {
+        _appDbContext.People.Add(model);
+        _appDbContext.SaveChanges();
+        return model.Id;
+    }
 }

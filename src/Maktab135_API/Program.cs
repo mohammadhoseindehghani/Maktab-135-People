@@ -22,10 +22,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    // app.UseSwaggerUI(options =>
-    // {
-    //     options.SwaggerEndpoint("/openapi/v1.json", "Maktab135 API v1");
-    // });
+    app.UseSwaggerUI(options =>
+    {
+        options.RoutePrefix = string.Empty;
+        options.SwaggerEndpoint("/openapi/v1.json", "Maktab135 API v1");
+    });
 }
 
 app.UseHttpsRedirection();
