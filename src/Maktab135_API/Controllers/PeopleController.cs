@@ -4,7 +4,7 @@ using UI_MVC.Services;
 namespace Maktab135_API.Controllers
 {
 	[ApiController]
-	[Route("api/people")]
+	[Route("api/[controller]")]
     public class PeopleController : ControllerBase
     {
 	    private readonly IPeopleRepository _peopleRepository;
@@ -14,7 +14,7 @@ namespace Maktab135_API.Controllers
 		    _peopleRepository = peopleRepository;
 	    }
 
-		[HttpGet]
+		//[HttpGet()]
         public IActionResult Index()
         {
 	        var model = _peopleRepository.GetAll();

@@ -32,6 +32,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+//app.MapControllers();
+app.MapControllerRoute(
+	"default",
+	"api/v{version:apiVersion}/{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
